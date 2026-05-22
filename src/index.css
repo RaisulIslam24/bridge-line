@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1;
+  --color-secondary: #a855f7;
+  --color-accent: #ec4899;
+  --color-brand-blue: #3b82f6;
+  --color-brand-purple: #8b5cf6;
+  --color-brand-pink: #d946ef;
+  --color-footer-purple: #2e1065;
+  --color-service-bg: #fdfaff;
+  --color-navy-blue: #1e1b4b;
+
+  --bg-gradient-about: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);
+  --bg-gradient-contact: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%);
+  --bg-gradient-primary: linear-gradient(90deg, #4f46e5 0%, #9333ea 100%);
+  --bg-gradient-btn: linear-gradient(90deg, #2563eb 0%, #d946ef 100%);
+  --bg-gradient-button: linear-gradient(90deg, #4f46e5 0%, #ec4899 100%);
+
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  --animate-blob: blob 7s infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+.mesh-gradient-container {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.services-mesh-container {
+  position: relative;
+  background-color: var(--color-service-bg);
+  overflow: hidden;
+}
+
+.about-mesh-container {
+  position: relative;
+  background-color: var(--color-service-bg);
+  overflow: hidden;
+}
+
+.contact-mesh-container {
+  position: relative;
+  background-color: var(--color-service-bg);
+  overflow: hidden;
+}
+
+.mesh-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  filter: blur(120px);
+  border-radius: 100%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.glow-pink {
+  bottom: 0%;
+  left: -15%;
+  background: #ec4899;
+}
+
+.glow-purple {
+  top: 0%;
+  right: -10%;
+  background: #8b5cf6;
+}
+
+.glow-blue-left {
+  top: -10%;
+  left: -15%;
+  background: #60a5fa;
+}
+
+.glow-pink-right {
+  bottom: -10%;
+  right: -10%;
+  background: #f472b6;
+}
+
+
+.glow-pink-left {
+  top: 10%;
+  left: -15%;
+  background: #ec4899;
+}
+
+.glow-blue-right {
+  bottom: 0%;
+  right: -10%;
+  background: #3b82f6;
+}
+
+.footer-gradient {
+  background: linear-gradient(135deg, #1a163d 0%, #2e1065 50%, #1a163d 100%);
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: blur(80px);
+  border-radius: 100%;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.blob-1 { top: -10%; left: -10%; background: #60a5fa; }
+.blob-2 { top: 10%; right: -5%; background: #f472b6; }
+.blob-3 { bottom: -10%; left: 20%; background: #c084fc; }
