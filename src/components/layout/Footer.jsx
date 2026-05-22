@@ -1,5 +1,3 @@
-import { HiOutlineOfficeBuilding } from 'react-icons/hi';
-
 const Footer = () => {
   const logoPath = "/Images/Logo.png";
 
@@ -26,7 +24,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer-gradient pt-16 pb-8 text-white font-sans relative overflow-hidden">
+    <footer className="bg-[#001a2c] py-4 text-white font-sans relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24 mb-12">
 
@@ -54,7 +52,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h3 className="text-lg font-bold mb-8">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-5">
               {quickLinks.map((link) => (
                 <li key={link.id}>
@@ -70,7 +68,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h3 className="text-lg font-bold mb-8">Contact</h3>
+            <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-5 text-white/60 text-[15px]">
               <li>Dhaka, Bangladesh</li>
               <li>
@@ -83,7 +81,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-10">
+        <div className="border-t border-white/10 pt-4">
           <p className="text-center text-white/50 text-[13px] tracking-wide">
             © {new Date().getFullYear()} Bridgeline Global Services Limited. All Rights Reserved.
           </p>

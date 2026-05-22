@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #6366f1;
-  --color-secondary: #a855f7;
+  --color-primary: #00c2fe;
+  --color-secondary: #bdeb0f;
   --color-accent: #ec4899;
   --color-brand-blue: #3b82f6;
   --color-brand-purple: #8b5cf6;
@@ -10,7 +10,9 @@
   --color-footer-purple: #2e1065;
   --color-service-bg: #fdfaff;
   --color-navy-blue: #1e1b4b;
+   --color-navy-dark: #1b143e; 
 
+  --bg-brand-gradient: linear-gradient(90deg, #00c2fe 0%, #bdeb0f 100%);
   --bg-gradient-about: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);
   --bg-gradient-contact: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%);
   --bg-gradient-primary: linear-gradient(90deg, #4f46e5 0%, #9333ea 100%);
@@ -34,7 +36,7 @@
 
 .mesh-gradient-container {
   position: relative;
-  background-color: #ffffff;
+  background-color: #f8fbff;
   overflow: hidden;
 }
 
@@ -103,10 +105,6 @@
   background: #3b82f6;
 }
 
-.footer-gradient {
-  background: linear-gradient(135deg, #1a163d 0%, #2e1065 50%, #1a163d 100%);
-}
-
 .blob {
   position: absolute;
   width: 500px;
@@ -117,6 +115,6 @@
   z-index: 0;
 }
 
-.blob-1 { top: -10%; left: -10%; background: #60a5fa; }
-.blob-2 { top: 10%; right: -5%; background: #f472b6; }
+.blob-1 { top: -10%; left: -10%; background: #00c2fe; opacity: 0.15; filter: blur(100px); position: absolute; width: 600px; height: 600px; border-radius: 100%; }
+.blob-2 { top: 10%; right: -5%; background: #bdeb0f; opacity: 0.12; filter: blur(120px); position: absolute; width: 500px; height: 500px; border-radius: 100%; }
 .blob-3 { bottom: -10%; left: 20%; background: #c084fc; }
