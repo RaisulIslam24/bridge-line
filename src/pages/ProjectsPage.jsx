@@ -9,11 +9,9 @@ import {
 import { FiSend } from 'react-icons/fi';
 import ReCAPTCHA from "react-google-recaptcha";
 
-// 1. Import the Phone Input and its default styles
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
-// --- HELPER COMPONENT: Image Fallback ---
 const LogoFallback = ({ src, name, sizeClass, textClass }) => {
   const [error, setError] = useState(false);
   const initial = name ? name.charAt(0).toUpperCase() : 'B';
@@ -31,13 +29,12 @@ const LogoFallback = ({ src, name, sizeClass, textClass }) => {
   );
 };
 
-// --- DATA ---
 const clientProjects = [
   { client: "Bangladesh Investment Development Authority (BIDA)", clientLogo: "/Logos/bida.jpeg", tag: "Investment Development", color: "border-[#00c2fe]", systems: [{ name: "One Stop Service (OSS)", logo: "/Logos/bida-oss.jpeg" }, { name: "BanglaBiz", logo: "/Logos/banglabiz.jpeg" }, { name: "Investor Relationship Management (IRMS)", logo: "" }, { name: "Companies Data Archiving System", logo: null }] },
-  { client: "Bangladesh Economic Zones Authority (BEZA)", clientLogo: "/Logos/beza.jpeg", tag: "Economic Zones", color: "border-[#bdeb0f]", systems: [{ name: "One Stop Service (OSS)", logo: null }] },
+  { client: "Bangladesh Economic Zones Authority (BEZA)", clientLogo: "/Logos/beza.jpeg", tag: "Economic Zones", color: "border-[#bdeb0f]", systems: [{ name: "One Stop Service (OSS)", logo: "/Logos/bida-oss.jpeg" }] },
   { client: "Bangladesh Export Processing Zones Authority (BEPZA)", clientLogo: "/Logos/bepza.jpeg", tag: "Export Processing", color: "border-[#1b143e]", systems: [{ name: "Digital Application Processing (DAPS)", logo: null }] },
-  { client: "Bangladesh Hi-Tech Park Authority (BHTPA)", clientLogo: "/Logos/bhtpa.jpeg", tag: "Technology Parks", color: "border-[#00c2fe]", systems: [{ name: "One Stop Service (OSS)", logo: null }] },
-  { client: "Bangladesh Small & Cottage Industries (BSCIC)", clientLogo: "/Logos/bscic.jpeg", tag: "SME & Cottage Industries", color: "border-slate-300", systems: [{ name: "One Stop Service (OSS)", logo: null }] }
+  { client: "Bangladesh Hi-Tech Park Authority (BHTPA)", clientLogo: "/Logos/bhtpa.jpeg", tag: "Technology Parks", color: "border-[#00c2fe]", systems: [{ name: "One Stop Service (OSS)", logo: "/Logos/bida-oss.jpeg" }] },
+  { client: "Bangladesh Small & Cottage Industries (BSCIC)", clientLogo: "/Logos/bscic.jpeg", tag: "SME & Cottage Industries", color: "border-slate-300", systems: [{ name: "One Stop Service (OSS)", logo: "/Logos/bida-oss.jpeg" }] }
 ];
 
 const serviceCategories = [
@@ -86,7 +83,7 @@ const ProjectsPage = () => {
   const [captchaToken, setCaptchaToken] = useState(null); 
 
   const [formData, setFormData] = useState({
-    name: '', designation: '', email: '', phone: '', address: '', description: '', acknowledge: false
+    name: '', designation: '', email: '', phone: '', address: '', country: 'Bangladesh', description: '', acknowledge: false
   });
 
   const handleSubmit = (e) => {
@@ -137,7 +134,6 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      {/* Tab Switcher */}
       <section className="max-w-7xl mx-auto px-8 -mt-8 relative z-30">
         <div className="bg-white p-1.5 rounded-full shadow-xl flex w-fit border border-slate-100 mx-auto md:mx-0">
           {['projects', 'services'].map((tab) => (
@@ -149,7 +145,6 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      {/* Content Area */}
       <section className="max-w-[1400px] mx-auto px-8 py-20 min-h-[600px]">
         <AnimatePresence mode='wait'>
           {activeTab === 'projects' ? (
@@ -226,15 +221,12 @@ const ProjectsPage = () => {
       <AnimatePresence>
         {isModalOpen && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
-            {/* Backdrop */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => !isSubmitted && setIsModalOpen(false)} className="absolute inset-0 bg-[#001a2c]/80 backdrop-blur-md" />
             
-            {/* Modal Body */}
             <motion.div initial={{ scale: 0.9, opacity: 0, y: 20 }} animate={{ scale: 1, opacity: 1, y: 0 }} exit={{ scale: 0.9, opacity: 0, y: 20 }} className="relative w-full max-w-4xl bg-white shadow-2xl overflow-hidden flex flex-col max-h-[95vh]">
               
               {!isSubmitted ? (
                 <>
-                  {/* Modal Header */}
                   <div className="p-6 md:p-10 border-b border-slate-100 flex justify-between items-start bg-slate-50/50">
                     <div>
                       <h3 className="text-2xl md:text-3xl font-black text-[#00338d]">{selectedPoint?.name}</h3>
@@ -243,11 +235,9 @@ const ProjectsPage = () => {
                     <button onClick={() => setIsModalOpen(false)} className="text-slate-400 hover:text-slate-900 cursor-pointer p-2"><HiX size={24} /></button>
                   </div>
 
-                  {/* Modal Content - Scrollable */}
                   <div className="overflow-y-auto p-6 md:p-10 custom-scrollbar">
                     <form onSubmit={handleSubmit} className="space-y-8">
-                      
-                      {/* Section 1: Basic Information */}
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-1.5">
                             <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider ml-1">Full Name *</label>
@@ -288,7 +278,6 @@ const ProjectsPage = () => {
                         </div>
                       </div>
 
-                      {/* Section 2: Terms and Conditions (Matches Screenshot) */}
                       <div className="pt-8 border-t border-slate-100">
                         <h4 className="text-xl font-bold text-[#00338d] mb-4">Terms and Conditions</h4>
                         <p className="text-slate-600 text-sm leading-relaxed mb-4">

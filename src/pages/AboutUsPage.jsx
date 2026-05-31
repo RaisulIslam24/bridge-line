@@ -82,7 +82,7 @@ const MemberCard = ({ member, idx, onOpen }) => (
   </motion.div>
 );
 
-const TeamPage = () => {
+const AboutUsPage = () => {
   const [selectedMember, setSelectedMember] = useState(null);
 
   useEffect(() => {
@@ -172,4 +172,4 @@ const TeamPage = () => {
   );
 };
 
-export default TeamPage;
+export default AboutUsPage;

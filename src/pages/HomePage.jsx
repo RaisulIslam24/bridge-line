@@ -6,7 +6,7 @@ import AboutUs from "../components/sections/AboutUs";
 import ContactUs from "../components/sections/ContactUs";
 import Careers from "../components/sections/Careers";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Navbar />
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

@@ -53,6 +53,7 @@ const Navbar = () => {
     { name: 'Our Insights', id: 'insights', path: '/' },
     { name: 'What we do', id: 'services', path: '/' },
     { name: 'About Bridgeline', id: 'about', path: '/' },
+    { name: 'News Room', id: 'news', path: '/news' },
     { name: 'Careers', id: 'careers', path: '/' },
   ];
 
