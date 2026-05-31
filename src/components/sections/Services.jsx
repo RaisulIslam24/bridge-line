@@ -13,7 +13,7 @@ const services = [
   { title: "Business Setup & Management", desc: "Guidance for starting and managing businesses.", icon: <HiOutlineOfficeBuilding />, color: "bg-primary" },
   { title: "Software Development", desc: "Customized software and tech solutions.", icon: <HiOutlineCode />, color: "bg-blue-600" },
   { title: "Project Management", desc: "Professional PMC and implementation.", icon: <HiOutlineBriefcase />, color: "bg-indigo-500" },
-  { title: "Govt Services Facilitation", desc: "Process design and system integration.", icon: <HiOutlineCog />, color: "bg-orange-400" },
+  { title: "PMC Service Facilitation", desc: "Process design and system integration.", icon: <HiOutlineCog />, color: "bg-orange-400" },
   { title: "Export-Import Services", desc: "Buying house and business simplification.", icon: <HiOutlineTruck />, color: "bg-teal-500" },
   { title: "Licensing & Registration", desc: "Assistance in obtaining approvals.", icon: <HiOutlineDocumentText />, color: "bg-sky-500" },
   { title: "Infrastructure Development", desc: "Consultancy in road and building sectors.", icon: <HiOutlineLibrary />, color: "bg-slate-500" },
@@ -26,13 +26,11 @@ const services = [
 const Services = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Show 5 cards initially
   const initialCount = 5;
   const visibleServices = isExpanded ? services : services.slice(0, initialCount);
 
   return (
     <section id="services" className="py-24 relative overflow-hidden bg-white">
-      {/* Mesh Glow Background matching your brand */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -50,10 +48,6 @@ const Services = () => {
           </h2>
         </div>
 
-        {/* GRID LOGIC: 
-            Not Expanded: Exactly 5 columns on Desktop (lg).
-            Expanded: 4 columns on Desktop (lg).
-        */}
         <motion.div 
           layout
           className={`
@@ -91,7 +85,6 @@ const Services = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* View All Button */}
         <div className="flex justify-center mt-20">
           <button
             onClick={() => setIsExpanded(!isExpanded)}

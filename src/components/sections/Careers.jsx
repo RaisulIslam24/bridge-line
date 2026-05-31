@@ -5,11 +5,9 @@ const Careers = () => {
   return (
     <section id="careers" className="py-20 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Main Container: Flexbox for side-by-side layout */}
+
         <div className="flex flex-col lg:flex-row items-stretch shadow-2xl rounded-sm overflow-hidden">
-          
-          {/* LEFT SIDE: The Lifestyle Image */}
+
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -22,11 +20,9 @@ const Careers = () => {
               alt="Team working together" 
               className="absolute inset-0 w-full h-full object-cover"
             />
-            {/* Subtle overlay to match the glass reflection in the design */}
             <div className="absolute inset-0 bg-white/5 backdrop-blur-[1px]"></div>
           </motion.div>
 
-          {/* RIGHT SIDE: The Corporate Blue Content Box */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

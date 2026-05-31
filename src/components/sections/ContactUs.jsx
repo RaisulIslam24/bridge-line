@@ -15,7 +15,6 @@ export default function ContactUs() {
 
   return (
     <section id="contact" className="contact-mesh-container py-24 relative overflow-hidden bg-white">
-      {/* Background Mesh Glows */}
       <div className="mesh-glow absolute top-0 left-[-10%] bg-primary opacity-10 blur-[120px] w-[600px] h-[600px] rounded-full pointer-events-none" />
       <div className="mesh-glow absolute bottom-0 right-[-10%] bg-secondary opacity-10 blur-[120px] w-[500px] h-[500px] rounded-full pointer-events-none" />
 
@@ -28,12 +27,10 @@ export default function ContactUs() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-          {/* LEFT SIDE: Contact Information */}
           <div className="lg:col-span-5 space-y-10">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">Contact Information</h3>
             
             <div className="space-y-8">
-              {/* Address */}
               <div className="flex gap-5 group">
                 <div className="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
                   <HiOutlineLocationMarker size={24} />
@@ -47,7 +44,6 @@ export default function ContactUs() {
                 </div>
               </div>
 
-              {/* Email */}
               <div className="flex gap-5 group">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
                   <HiOutlineMail size={24} />
@@ -60,7 +56,6 @@ export default function ContactUs() {
                 </div>
               </div>
 
-              {/* Phone */}
               <div className="flex gap-5 group">
                 <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
                   <HiOutlinePhone size={24} />
@@ -74,7 +69,6 @@ export default function ContactUs() {
               </div>
             </div>
 
-            {/* SOCIAL ICONS SECTION */}
             <div className="pt-8 border-t border-slate-100 space-y-5">
               <h4 className="text-sm font-black uppercase tracking-widest text-slate-400 ml-1">Follow Us</h4>
               <div className="flex flex-wrap gap-4">
@@ -93,7 +87,6 @@ export default function ContactUs() {
             </div>
           </div>
 
-          {/* RIGHT SIDE: Contact Form */}
           <div className="lg:col-span-7 bg-slate-50/50 backdrop-blur-xl p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white relative z-20">
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="space-y-1.5">

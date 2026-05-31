@@ -1,5 +1,5 @@
 const Footer = () => {
-  const logoPath = "/Images/Logo.png";
+  const logoPath = "/Logos/Logo.png";
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);

@@ -4,19 +4,11 @@ import { useNavigate } from 'react-router-dom';
 const AboutUs = () => {
   const navigate = useNavigate();
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="about" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
-          {/* LEFT CONTENT: Text Section */}
+
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -24,17 +16,14 @@ const AboutUs = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-col space-y-8"
           >
-            {/* Small uppercase tag */}
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.3em]">
               Research Consulting Ltd
             </span>
 
-            {/* Main Title using your Primary Sky Blue */}
             <h2 className="text-5xl md:text-6xl font-black text-primary tracking-tight">
               About Us
             </h2>
 
-            {/* Paragraph Content */}
             <div className="space-y-6 text-slate-600 text-base md:text-[17px] leading-relaxed font-medium">
               <p>
                 We are based at the University of Nottingham Innovation Park and work with 
@@ -50,7 +39,6 @@ const AboutUs = () => {
               </p>
             </div>
 
-            {/* Button using your Secondary Lime Green */}
             <div className="pt-4">
               <button 
                 onClick={() => navigate('/about')}
@@ -61,7 +49,6 @@ const AboutUs = () => {
             </div>
           </motion.div>
 
-          {/* RIGHT CONTENT: Image with Custom Shape */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -69,7 +56,6 @@ const AboutUs = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            {/* The Image Wrapper with the unique bottom-right curve */}
             <div className="relative z-10 w-full h-[400px] md:h-[550px] overflow-hidden rounded-tl-sm rounded-tr-sm rounded-bl-sm rounded-br-[120px] md:rounded-br-[180px] shadow-2xl">
               <img 
                 src="https://t4.ftcdn.net/jpg/00/71/74/29/360_F_71742923_SxOK3IzhX1Vv09O70REwisyWnNFfJZMb.jpg" 
@@ -78,7 +64,6 @@ const AboutUs = () => {
               />
             </div>
 
-            {/* Subtle background accent (optional, but adds depth like the screenshot) */}
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 -z-0 rounded-full blur-2xl" />
           </motion.div>
 
